@@ -8,6 +8,8 @@ library(caret)
 library(ggplot2)
 library(MASS)
 table(dataDecision)
+library(cluster)
+
 # Convert target variable to factor
 data$Decision <- as.factor(data$Decision)
 
@@ -56,6 +58,13 @@ cat("Confirmed Features:\n")
 print(confirmed_features)
 
 
+# Random Forest feature importance
+library(randomForest)
+rf_model <- randomForest(Decision ~ ., data = train_data, importance = TRUE)
+importance(rf_model)
+
+
+
 
 # Data splitting (60-40)
 set.seed(123)  # For reproducibility
@@ -94,14 +103,6 @@ str(train_data_onehot)
 mds_data <- dist(as.matrix(train_data[-1]))  # Exclude target variable
 mds_fit <- cmdscale(mds_data)
 
-
-
-
-
-# Load necessary libraries
-library(cluster)
-library(ggplot2)
-library(e1071)  # For SVM
 
 # Calculate Gower's distance
 mds_data <- daisy(train_data_onehot, metric = "gower")
@@ -144,12 +145,6 @@ ggplot() +
 sum(is.na(train_data))
 
 
-# Random Forest feature importance
-library(randomForest)
-rf_model <- randomForest(Decision ~ ., data = train_data, importance = TRUE)
-importance(rf_model)
 
-# Pearson correlation matrix
-cor_matrix <- cor(train_data_onehot)
-print(cor_matrix)
+
 
