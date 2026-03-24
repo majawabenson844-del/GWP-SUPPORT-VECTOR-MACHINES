@@ -23,7 +23,8 @@ The project demonstrates how machine learning can be applied to groundwater pote
 
 ## 📂 Repository Structure
 
-- `Support vector machines.R` → Main script for preprocessing and SVM training  
+- `Support vector machines.R` → Main script for preprocessing and SVM training
+- - `augmented_data.csv` → dataset used for model training 
 - `.github/workflows/deploy.yml` → GitHub Actions workflow for automated runs  
 - `README.md` → Project documentation  
 
