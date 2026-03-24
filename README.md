@@ -1,16 +1,16 @@
 # GWP – Support Vector Machines
 
-This repository contains code, data preprocessing workflows, and model evaluation scripts for groundwater potential (GWP) classification using Support Vector Machines (SVM). The project demonstrates how machine learning can be applied to hydrogeological datasets to produce reproducible, transparent, and interpretable groundwater mapping results.
+This repository contains code, data preprocessing workflows and model evaluation scripts for groundwater potential (GWP) classification using Support Vector Machines (SVM). The project demonstrates how machine learning can be applied to hydrogeological datasets to produce reproducible, transparent and interpretable groundwater mapping results.
 
 ---
 
 ## 🔹 Key Features
 
-- **Preprocessing**: One-hot encoding of categorical predictors including soil texture, soil colour, geological features, elevation, vegetation attributes, and drainage density.  
+- **Preprocessing**: One-hot encoding of categorical predictors including soil texture, soil colour, geological features, elevation, vegetation attributes and drainage density.  
 - **Class Imbalance Handling**: Implementation of class weights to improve sensitivity for minority zones (High Potential).  
 - **Model Training**: SVM classifier with linear kernel, optimized for categorical data.  
 - **Evaluation Metrics**: Confusion matrix, accuracy, kappa, sensitivity, specificity, balanced accuracy, prevalence, detection rate, and detection prevalence.  
-- **Error Attribution**: Analysis of misclassifications, highlighting causes such as indicator variability, model fitting deviations, and regional geological heterogeneity.  
+- **Error Attribution**: Analysis of misclassifications, highlighting causes such as indicator variability, model fitting deviations and regional geological heterogeneity.  
 - **Deployment**: GitHub Actions workflow for reproducible execution of preprocessing and model training scripts.  
 
 ---
